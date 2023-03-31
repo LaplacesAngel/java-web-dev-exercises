@@ -1,6 +1,8 @@
 package org.launchcode.java.demos.lsn2controlflowandcollections;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayListGradebook {
@@ -23,7 +25,7 @@ public class ArrayListGradebook {
             }
 
         } while(!newStudent.equals(""));
-
+        System.out.println(students);
         // Get student grades
         for (String student : students) {
             System.out.print("Grade for " + student + ": ");
@@ -42,5 +44,22 @@ public class ArrayListGradebook {
 
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
+
+        ArrayList<String> planets = new ArrayList<>();
+        System.out.println(planets);
+        planets.add("Mercury");
+        planets.add("Venus");
+        planets.add("Earth");
+        planets.add("Mars");
+
+        System.out.println(planets);
+        System.out.println(planets.size());
+        System.out.println(planets.contains("Earth"));
+        System.out.println(planets.indexOf("Mars"));
+        Collections.sort(planets);
+        System.out.println(planets);
+        String[] planetsArray = new String[planets.size()];
+        planets.toArray(planetsArray);
+        System.out.println(planetsArray);
     }
 }
